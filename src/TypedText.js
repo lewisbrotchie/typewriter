@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Typist from "react-typist";
 
 const Text = styled.h1`
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: -0.2;
 `;
 
 class TypedText extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentString: ""
-    };
-  }
-
   render() {
-    return <Text>Hello you, this text has the typed effect</Text>;
+    return (
+      <Text>
+        <Typist>
+          Lewis
+          <Typist.Backspace count={5} delay={500} />
+        </Typist>
+      </Text>
+    );
   }
 }
 
