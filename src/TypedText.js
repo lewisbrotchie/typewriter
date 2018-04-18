@@ -1,14 +1,23 @@
 import React, { Component } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 const Text = styled.h1`
-  font-family: "tradegothiclt-bold", sans-serif;
-  text-transform: uppercase;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: -0.2;
 `;
 
 class TypedText extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentString: ""
+    };
+  }
+
   render() {
-    return <h1>hello</h1>;
+    return <Text>Hello you, this text has the typed effect</Text>;
   }
 }
 
